@@ -68,14 +68,14 @@ workflows:
   build-unity-project:
     jobs:
       - build-android:
-          context: unity
+          context: Unity
       - beta-android:
           requires:
             - build-android
           context:
             - mobile
       - export-ios:
-          context: unity
+          context: Unity
       - build-and-beta-ios:
           requires:
             - export-ios
